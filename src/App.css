@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+:root {
+	--actionBackgroundColor: #f76b8a;
+	--actionTextColor: white;
+	--activeColor: #66bfbf;
+	--standardBackgroundColor: #fcfefe;
+	--alternativeBackgroundColor: #eaf6f6;
+	--standardTextColor: black;
+	--lightColor: lightgray;
+	--moderateColor: darkgray;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* reseting page */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+	background-color: var(--alternativeBackgroundColor);
 }
 
-.App-header {
-  background-color: #282c34;
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+	outline-color: var(--activeColor);
+}
+
+select {
+	border-color: var(--moderateColor);
+}
+
+input[type='text'] {
+	border-color: var(--lightColor);
+}
+
+/* app */
+.app {
+  display: flex;
   min-height: 100vh;
+}
+
+/* sidebar */
+.sidebar {
+  padding: 10px;
+  background: rgb(247, 246, 243);
+  transition: box-shadow 300ms ease-in 0s;
+  width: 340px;
+}
+.app-title {
+  margin-top: 10px;
+}
+.content {
+  padding: 20px 0;
+}
+.timetable {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  line-height: 30px;
+  padding-right: 30px;
+  white-space: nowrap;
+}
+.timetable-icons {
+  display: flex;
+}
+
+/* editor */
+.editor {
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+}
+
+/* schedule */
+.schedule {
+  margin: 40px 0 0 150px;
+}
+.schedule .row {
+  display: flex;
+}
+.schedule .column {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* box */
+.box {
+  width: 140px;
+  min-height: 60px;
+  line-height: 60px;
+  background-color: #efefef;
+  text-align: center;
+  margin-right: 2px; 
 }
